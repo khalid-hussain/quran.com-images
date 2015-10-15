@@ -10,7 +10,7 @@
 #  Ahmed El-Helw
 #  Nour Sharabash
 
-# The code is copyleft GPL (read: free) but the actual fonts and pages (in the 'data' 
+# The code is copyleft GPL (read: free) but the actual fonts and pages (in the 'data'
 # directory) belong to the King Fahed Complex in Saudia Arabia
 # Their URL: http://www.qurancomplex.com
 
@@ -337,7 +337,7 @@ sub generate_image {
         $max_x - $min_x + 1, $max_y - $min_y + 1 # source w, h
     );
 
-    my $path = './output/width_'. $width .'/em_'. $scale .'/';
+    my $path = '.\output\width_'. $width .'\em_'. $scale .'\\';
     my $file = $sura ."_". $ayah .".png";
 
     eval { `mkdir -p $path` };
