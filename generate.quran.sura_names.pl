@@ -10,7 +10,7 @@
 #  Ahmed El-Helw
 #  Nour Sharabash
 
-# The code is copyleft GPL (read: free) but the actual fonts and pages (in the 'data' 
+# The code is copyleft GPL (read: free) but the actual fonts and pages (in the 'data'
 # directory) belong to the King Fahed Complex in Saudia Arabia
 # Their URL: http://www.qurancomplex.com
 
@@ -86,7 +86,7 @@ sub generate_page {
 		$hash->{$line} = [$ayah, $text];
 		my $line_width = $self->_get_line_width($text, $page_str, 24);
 		# 24 is an arbitrary font size because we're simply testing to find the longest line
-		
+
 		if ($line_width > $longest_line_width) {
 			$longest_line = $line;
 			$longest_line_width = $line_width;
@@ -127,7 +127,7 @@ sub generate_page {
 	}
 
 	my $path = "./output/width_$width/";
-	eval { `mkdir -p $path` };
+	eval { `mkdir $path` };
 	open OUTPUT, ">$path/$page_str.png";
 	binmode OUTPUT;
 	print OUTPUT $gd->png(9); # 0 is highest quality, 9 is highest compression level
@@ -154,7 +154,7 @@ sub _get_line_width {
 		# (x3,y3) upper right corner
 		# (x4,y4) upper left corner
 
-		
+
 		# max of lower right corner's x versus upper right corner's x
 		# minus
 		# min of lower left corner's x verses upper left corner's x

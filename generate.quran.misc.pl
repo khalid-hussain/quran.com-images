@@ -10,7 +10,7 @@
 #  Ahmed El-Helw
 #  Nour Sharabash
 
-# The code is copyleft GPL (read: free) but the actual fonts and pages (in the 'data' 
+# The code is copyleft GPL (read: free) but the actual fonts and pages (in the 'data'
 # directory) belong to the King Fahed Complex in Saudia Arabia
 # Their URL: http://www.qurancomplex.com
 
@@ -103,7 +103,7 @@ if ($bismillah) {
 
 	print "Generating image for bismillah...\n";
 
-	eval { `mkdir -p $path` };
+	eval { `mkdir $path` };
 	open OUTPUT, ">$path/bismillah.png";
 	binmode OUTPUT;
 	print OUTPUT $gd_image->png(9); # 0 is highest quality, 9 is highest compression level

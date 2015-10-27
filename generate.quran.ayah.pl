@@ -340,7 +340,7 @@ sub generate_image {
     my $path = '.\output\width_'. $width .'\em_'. $scale .'\\';
     my $file = $sura ."_". $ayah .".png";
 
-    eval { `mkdir -p $path` };
+    eval { `mkdir $path` };
     open OUTPUT, ">". $path . $file;
     binmode OUTPUT;
     print OUTPUT $gd_image_final->png(9);
